@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <h4><span class="label label-default">Execution Result</span></h4>
+
+	<table class="table" style="margin-top: 10px">
+		<tr>
+			<th> Test Suite/Release </th>
+			<tr> 11000 </tr>
+			<td> 11010 </td>
+			<td> 11020 </td>
+			<td> 11030 </td>
+			<td> 11040 </td>
+		</tr>
+
+		<tr>
+			<th> Phoronix-Padman (FPS)</th>
+                        <td> 79 </td>
+                        <td> 49 </td>
+                        <td> 89 </td>
+                        <td> 40 </td>
+                        <td> 50 </td>
+		</tr>
+
+		<tr>
+			<th> Phoronix-OpenArena (FPS)</th>
+			<td> 79 </td>
+			<td> 49 </td>
+			<td> 89 </td>
+			<td> 40 </td>
+			<td> 50 </td>
+
+		</tr>
+
+		 <tr>
+		        <th> Phoronix-Urbanterror (FPS)</th>
+		        <td> 52.7 </td>
+			<td> 68 </td>
+			<td> 39 </td>
+			<td> 49 </td>
+			<td> 30 </td>
+		 </tr>
+	</table>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+    <div class="author">
+    Prepared by SSG PG
+    </div>
+
+  {% include disqus.html %}
+</article>

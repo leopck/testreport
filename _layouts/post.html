@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<article class="post">
+	<h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="dropdown">
+    <h4><span class="label label-default">Execution Result</span></h4>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">All
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+       <li><a href="http://andromeda01.png.intel.com/repo/qe1/Hello-World/">Phoronix</a></li>
+       <li><a href="http://andromeda01.png.intel.com/repo/qe1/Glean/">Glean</a></li>
+       <li><a href="www.google.com">Other Tests</a></li>
+    </ul>
+  </div>
+	{% for post in site.posts %}
+
+	<!-- stanley: {{post.results}} -->
+	<table class="table" style="margin-top: 10px">
+		<tr>
+			<th> Test Suite with [Total Test Cases]/Release </th>
+			<td> {{post.title}} </td>
+		</tr>
+		<tr class = "success">
+			<th rowspan="3"> <a href="http://andromeda01.png.intel.com/repo/qe1/Hello-World/"> Phoronix [3]</a></th>
+			<td> Pass: 3 </td>
+		</tr>
+		<tr class = "active">
+			<td> Skip: 0 </td>
+		</tr>
+		<tr class = "danger">
+			<td> Failed: 0 </td>
+		</tr>
+	</table>
+	<!-- weitee: {{post.results[1].arguments}} -->
+	{% endfor %}
+
+	<!-- <table class="table" style="margin-top: 10px">
+		<tr>
+			<th> Test Suite with [Total Test Cases]/Release </th>
+			<td> 11000 </td>
+			<td> 11010 </td>
+			<td> 11020 </td>
+			<td> 11030 </td>
+			<td> 11040 </td>
+		</tr>
+		<tr class = "success">
+			<th rowspan="3"> <a href="http://andromeda01.png.intel.com/repo/qe1/Hello-World/"> Phoronix [3]</a></th>
+			<td> Pass: 3 </td>
+			<td> Pass: 2 </td>
+			<td> Pass: 3 </td>
+			<td> Pass: 3 </td>
+			<td> Pass: 3 </td>
+		</tr>
+		<tr class = "active">
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+		</tr>
+		<tr class = "danger">
+			<td> Failed: 0 </td>
+			<td> Failed: 1 </td>
+			<td> Failed: 1 </td>
+			<td> Failed: 1 </td>
+			<td> Failed: 1 </td>
+		</tr>
+
+		<tr class = "success">
+			<th rowspan="3"> <a href="http://andromeda01.png.intel.com/repo/qe1/Glean/">Glean [30] </a></th>
+			<td> Pass: 20 </td>
+			<td> Pass: 20 </td>
+			<td> Pass: 20 </td>
+			<td> Pass: 20 </td>
+			<td> Pass: 20 </td>
+		</tr>
+		<tr class = "active">
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+			<td> Skip: 0 </td>
+		</tr>
+		<tr class = "danger">
+			<td> Failed: 10 </td>
+			<td> Failed: 10 </td>
+			<td> Failed: 10 </td>
+			<td> Failed: 10 </td>
+			<td> Failed: 10 </td>
+		</tr>
+	</table> -->
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+    <div class="author">
+    Prepared by SSG PG
+    </div>
+
+  {% include disqus.html %}
+</article>
