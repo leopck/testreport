@@ -1,0 +1,125 @@
+<script type="text/javascript" src="assets/Chart.bundle.js"></script><script type="text/javascript" src="assets/utils.js"></script>
+<style>
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  height: auto !important;
+}
+</style>
+<div class="layers">
+   <div class="layer w-100 mB-10">
+      <h6 class="lh-1">Daily Test Status</h6>
+   </div>
+   <div class="layer w-100">
+
+    <script>
+        var barChartData = {
+            labels: ["WW49.1", "WW49.2", "WW50.1", "WW50.1", "WW50.2", "WW50.3", "WW50.3"],
+            datasets: [{
+                label: 'PASS',
+                backgroundColor: window.chartColors.green,
+                data: [
+                    4,
+                    4,
+                    4,
+                    4,
+                    4,
+                    4,
+                    4
+                ]
+            }, {
+                label: 'SKIPPED',
+                backgroundColor: window.chartColors.yellow,
+                data: [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }, {
+                label: 'FAILED',
+                backgroundColor: window.chartColors.red,
+                data: [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }]
+        };
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: 'bar',
+                data: barChartData,
+                options: {
+                    title:{
+                        display:true,
+                        <!-- text:"xxx" -->
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    responsive: true,
+                    scales: {
+                        xAxes: [{
+                            stacked: true,
+							scaleLabel: {
+							display: true,
+							labelString: 'Day'
+							}
+                        }],
+                        yAxes: [{
+                            stacked: true,
+							scaleLabel: {
+							display: true,
+							labelString: 'Number of Test'
+							}
+                        }]
+                    }
+                }
+            });
+        };
+    </script>
+    
+        <!-- <div style="width: 75%"> -->
+       <div class="layer w-100 p-20 mT-30">
+         <div>
+           <canvas id="canvas" height="220"></canvas>
+           <!-- <button id="randomizeData">Randomize Data</button> -->
+           
+         </div>
+       </div>
+          <!-- <canvas id="canvas" height="1000"></canvas> -->
+      </div>
+	
+      <!-- <ul class="list-task list-group" data-role="tasklist"> -->
+         <!-- <li class="list-group-item bdw-0" data-role="task"> -->
+            <!-- <div class="checkbox checkbox-circle checkbox-info peers ai-c"><input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"><label for="inputCall1" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Call John for Dinner</span></label></div> -->
+         <!-- </li> -->
+         <!-- <li class="list-group-item bdw-0" data-role="task"> -->
+            <!-- <div class="checkbox checkbox-circle checkbox-info peers ai-c"><input type="checkbox" id="inputCall2" name="inputCheckboxesCall" class="peer"><label for="inputCall2" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Book Boss Flight</span> <span class="peer"><span class="badge badge-pill fl-r badge-success lh-0 p-10">2 Days</span></span></label></div> -->
+         <!-- </li> -->
+         <!-- <li class="list-group-item bdw-0" data-role="task"> -->
+            <!-- <div class="checkbox checkbox-circle checkbox-info peers ai-c"><input type="checkbox" id="inputCall3" name="inputCheckboxesCall" class="peer"><label for="inputCall3" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Hit the Gym</span> <span class="peer"><span class="badge badge-pill fl-r badge-danger lh-0 p-10">3 Minutes</span></span></label></div> -->
+         <!-- </li> -->
+         <!-- <li class="list-group-item bdw-0" data-role="task"> -->
+            <!-- <div class="checkbox checkbox-circle checkbox-info peers ai-c"><input type="checkbox" id="inputCall4" name="inputCheckboxesCall" class="peer"><label for="inputCall4" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Give Purchase Report</span> <span class="peer"><span class="badge badge-pill fl-r badge-warning lh-0 p-10">not important</span></span></label></div> -->
+         <!-- </li> -->
+         <!-- <li class="list-group-item bdw-0" data-role="task"> -->
+            <!-- <div class="checkbox checkbox-circle checkbox-info peers ai-c"><input type="checkbox" id="inputCall5" name="inputCheckboxesCall" class="peer"><label for="inputCall5" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Watch Game of Thrones Episode</span> <span class="peer"><span class="badge badge-pill fl-r badge-info lh-0 p-10">Tomorrow</span></span></label></div> -->
+         <!-- </li> -->
+         <!-- <li class="list-group-item bdw-0" data-role="task"> -->
+            <!-- <div class="checkbox checkbox-circle checkbox-info peers ai-c"><input type="checkbox" id="inputCall6" name="inputCheckboxesCall" class="peer"><label for="inputCall6" class="peers peer-greed js-sb ai-c"><span class="peer peer-greed">Give Purchase report</span> <span class="peer"><span class="badge badge-pill fl-r badge-success lh-0 p-10">Done</span></span></label></div> -->
+         <!-- </li> -->
+      <!-- </ul> -->
+	  
+   </div>

@@ -1,9 +1,0 @@
----
-layout: post-phoronix
-title: Phoronix-Padman
-imageid: 10090
-fps: 89
-passed: 0
-skipped: 9
-failed: 5
----

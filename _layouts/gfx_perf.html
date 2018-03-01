@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<style media="screen">
+tr { display: block; float: left; }
+td { display: block; }
+</style>
+
+<article class="overview">
+  <div class="masonry-sizer col-md-6"></div>
+  <div class="masonry-item col-12" style="margin-bottom:10px">
+     <div class="bd bgc-white">
+        <div class="peers fxw-nw@lg+ ai-s">
+           <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+              <div class="layers">
+                 <div class="layer w-100 mB-10">
+                    <h6 class="lh-1">Test Report</h6>
+                 </div>
+                 <div class="layer w-100">
+                   <!-- id=world-map-marker, this comes from ./vector-maps.html -->
+                    <!-- <div id="world-map-marker"></div> -->
+                    
+                          <div class="bgc-light-blue-500 c-white p-20">
+                             <div class="peers ai-c jc-sb gap-40">
+                                <div class="peer peer-greed">
+                                   <h5>December 2017</h5>
+                                   <p class="mB-0"> Monthly Platform Summary Report</p>
+                                </div>
+                                <div class="peer">
+                                   <h3 class="text-right"></h3>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="table-responsive p-20 hovertable">
+                             <table class="table">
+                                <tbody>
+                                  <tr>
+                                     <td class="fw-600"><a href="#">Gordon Peak</a></td>
+                                     <td>Nexuiz 2.5.2</td>
+                                     <td>OpenArena 0.8.8</td>
+                                     <td>World of Padman 1.2</td>
+                                     <td>Urban Terror 4.2.013</td>
+                                  </tr>
+                                  {% for post in site.categories['gordonpeak'] limit: 10  %}
+                                   <tr>
+                                     <td>{{post.imageid}}</td>
+                                     <td>{{post.games[1]}}</td>
+                                     <td>{{post.games[3]}}</td>
+                                     <td>{{post.games[5]}}</td>
+                                     <td>{{post.games[7]}}</td>
+                                   </tr>
+                                   {% endfor %}
+                                </tbody>
+                             </table>
+                             <div class="ta-c bdT w-100 p-20"><a href="#">Check all the platforms</a></div>
+                          </div>
+                                                            
+                          
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</article>
