@@ -9,8 +9,8 @@
       
       
       <script type="text/javascript">
-      var custompath = '' + "/repo/build/web/jekyll/_site/assets/";
-      var custompathforhomepage = '' + "/repo/build/web/jekyll/_site";
+      var custompath = '{{ site.baseurl }}' + "/repo/build/web/jekyll/_site/assets/";
+      var custompathforhomepage = '{{ site.baseurl }}' + "/tools/validationtools/jekyll/_site/";
       //Hardcoded link at line 56
     </script>
     <script
@@ -56,7 +56,7 @@
                   </div>
                </div>
                <ul class="sidebar-menu scrollable pos-r">
-                  <li class="nav-item mT-30 active"><a class="sidebar-link" href= 'http://andromeda01.png.intel.com/repo/build/web/jekyll/_site/' default><span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></a></li>
+                  <li class="nav-item mT-30 active"><a class="sidebar-link" href= 'http://andromeda01.png.intel.com/tools/validationtools/jekyll/_site/' default><span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></a></li>
                   <li class="nav-item"><a class="sidebar-link" href="compose.html"><span class="icon-holder"><i class="c-blue-500 ti-share"></i> </span><span class="title">Compose</span></a></li>
                   <!-- <li class="nav-item"><a class="sidebar-link" href="email.html"><span class="icon-holder"><i class="c-brown-500 ti-email"></i> </span><span class="title">Email</span></a></li>
                   <li class="nav-item"><a class="sidebar-link" href="calendar.html"><span class="icon-holder"><i class="c-deep-orange-500 ti-calendar"></i> </span><span class="title">Calendar</span></a></li>
@@ -229,141 +229,7 @@
             <main class="main-content bgc-grey-100" id="main" role="main">
               <div id="mainContent">
                 <div class="row gap-20 masonry pos-r" style="height: 1000px">
-                <style media="screen">
-tr { display: block; float: left; }
-td { display: block; }
-</style>
-
-<article class="overview">
-  <div class="masonry-sizer col-md-6"></div>
-  <div class="masonry-item col-12" style="margin-bottom:10px">
-     <div class="bd bgc-white">
-        <div class="peers fxw-nw@lg+ ai-s">
-           <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
-              <div class="layers">
-                 <div class="layer w-100 mB-10">
-                    <h6 class="lh-1">Test Report</h6>
-                 </div>
-                 <div class="layer w-100">
-                   <!-- id=world-map-marker, this comes from ./vector-maps.html -->
-                    <!-- <div id="world-map-marker"></div> -->
-                    
-                          <div class="bgc-light-blue-500 c-white p-20">
-                             <div class="peers ai-c jc-sb gap-40">
-                                <div class="peer peer-greed">
-                                   <h5>December 2017</h5>
-                                   <p class="mB-0"> Monthly Platform Summary Report</p>
-                                </div>
-                                <div class="peer">
-                                   <h3 class="text-right"></h3>
-                                </div>
-                             </div>
-                          </div>
-                          <div class="table-responsive p-20 hovertable">
-                             <table class="table">
-                                <tbody>
-                                  <tr>
-                                     <td class="fw-600"><a href="#">Gordon Peak</a></td>
-                                     <td>Nexuiz 2.5.2</td>
-                                     <td>OpenArena 0.8.8</td>
-                                     <td>World of Padman 1.2</td>
-                                     <td>Urban Terror 4.2.013</td>
-                                  </tr>
-                                  
-                                   <tr>
-                                     <td>171220.08</td>
-                                     <td>62.68</td>
-                                     <td>64.37</td>
-                                     <td>74.03</td>
-                                     <td>34.57</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171220.0437</td>
-                                     <td>62.37</td>
-                                     <td>64.53</td>
-                                     <td>74.1</td>
-                                     <td>34.6</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171218.1255</td>
-                                     <td>62.68</td>
-                                     <td>64.37</td>
-                                     <td>74.03</td>
-                                     <td>34.57</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171218.1006</td>
-                                     <td>62.59</td>
-                                     <td>63.9</td>
-                                     <td>74.03</td>
-                                     <td>34.63</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171218.0728</td>
-                                     <td>62.53</td>
-                                     <td>64.33</td>
-                                     <td>74.03</td>
-                                     <td>34.7</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171218.0505</td>
-                                     <td>62.41</td>
-                                     <td>64.37</td>
-                                     <td>73.97</td>
-                                     <td>34.47</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171215.0517</td>
-                                     <td>62.21</td>
-                                     <td>64.13</td>
-                                     <td>74.03</td>
-                                     <td>34.33</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171213.1634</td>
-                                     <td>62.63</td>
-                                     <td>63.93</td>
-                                     <td>74.4</td>
-                                     <td>34.47</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171213.0813</td>
-                                     <td>62.67</td>
-                                     <td>64.4</td>
-                                     <td>74.33</td>
-                                     <td>34.73</td>
-                                   </tr>
-                                   
-                                   <tr>
-                                     <td>171213.0351</td>
-                                     <td>62.58</td>
-                                     <td>64.37</td>
-                                     <td>74.47</td>
-                                     <td>34.63</td>
-                                   </tr>
-                                   
-                                </tbody>
-                             </table>
-                             <div class="ta-c bdT w-100 p-20"><a href="#">Check all the platforms</a></div>
-                          </div>
-                                                            
-                          
-                 </div>
-              </div>
-           </div>
-        </div>
-     </div>
-  </div>
-</article>
-
+                {{ content }}
                 </div>
               </div>
             </main>
@@ -372,8 +238,8 @@ td { display: block; }
             <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright Â© 2017 Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a>. All rights reserved.</span></footer>
          </div>
       </div>
-      <script type="text/javascript" src="/repo/build/web/jekyll/assets/vendor.js"></script>
-      <script type="text/javascript" src="/repo/build/web/jekyll/assets/bundle.js"></script>
+      <script type="text/javascript" src="{{ site.baseurl }}/repo/build/web/jekyll/assets/vendor.js"></script>
+      <script type="text/javascript" src="{{ site.baseurl }}/repo/build/web/jekyll/assets/bundle.js"></script>
      
    </body>
 </html>
